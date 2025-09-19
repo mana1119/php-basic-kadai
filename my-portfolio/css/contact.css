@@ -1,0 +1,105 @@
+.contact {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* 見出し・説明文だけ中央揃え */
+.contact h1,
+.contact p {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 80px; /* 説明文下の余白（フォームとの間） */
+}
+
+/* 各フォーム項目を左揃え */
+.form-group {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  /* 高さを揃える */
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+label {
+  display: block;
+
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 80%; /* グリッドの残り幅をすべて使う */
+  max-width: none; /* ← 500px制限を削除 */
+  padding: 12px;
+  border: 1px solid #b55;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6cb4ee; /* アクセントカラー */
+  outline: none;
+}
+
+.g-recaptcha {
+  display: flex;
+  justify-content: center; /* reCAPTCHAを中央寄せ */
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group label {
+    margin-bottom: 8px;
+  }
+}
+
+.form-consent {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-consent .consent-note {
+  margin-bottom: 12px; /* 好きな値に調整（例: 12px） */
+  color: #555;
+  font-size: 14px;
+}
+
+.consent-label {
+  display: inline-flex; /* 横並び */
+  align-items: center; /* 縦位置を中央揃え */
+  gap: 6px; /* チェックボックスと文字の余白 */
+  cursor: pointer; /* ホバー時にカーソルが変わる */
+}
